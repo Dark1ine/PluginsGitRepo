@@ -19,6 +19,6 @@ public class PvPPlugin extends JavaPlugin {
 		this.saveDefaultConfig(); //Creates default config.
 	}
 	public void onDisable() {
-		getLogger().info("PvP Plugin shutting down.");
+		getLogger().info("PvP Plugin shutting down."); //Logs the plugin being disabled.
 	}
 }
