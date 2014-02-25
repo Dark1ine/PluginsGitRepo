@@ -1,0 +1,12 @@
+name: BombPlugin
+main: me.coolguy34526.bombplugin.BombPlugin
+version: 1.4
+author: coolguy34526
+description: Donor perk bomb plugin.
+
+commands:
+    bomb:
+        usage: /<command>
+        description: Donor perk to explode the area around you at the cost of 5 TNT
+        permission: BombPlugin.bomb
+        permission-message: Donate to gain access to this command!

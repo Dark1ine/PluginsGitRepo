@@ -1,0 +1,10 @@
+name: YoloPlugin
+main: com.gmail.iamthedarkline.yoloplugin.YoloPlugin
+version: 1.3
+
+commands:
+    YOLO:
+        description: Adds all status effects at level 100 to executor for 30 seconds.
+        usage: /yolo
+        permission: YoloPlugin.YOLO
+        permission-message: You don't have permission to perform this command.
