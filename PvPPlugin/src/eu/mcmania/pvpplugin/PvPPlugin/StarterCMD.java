@@ -62,8 +62,12 @@ public class StarterCMD extends PvPPlugin {
 		}
 		
 		Player player = e.getPlayer();
-		ItemStack sword = new ItemStack();
-				
+		ItemStack sword = new ItemStack((this.getConfig().getString(sword)));
+		ItemStack food = new ItemStack(this.getConfig().getString(food));
+		PlayerInventory inventory = player.getInventory();
+		
+		inventory.addItem(sword);
+		inventory.addItem(food);
 		
 	}
 
