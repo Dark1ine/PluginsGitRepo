@@ -9,9 +9,11 @@ import com.mewin.WGRegionEvents.events.RegionLeaveEvent;
 
 public class LeavingStarter extends PvPPlugin {
 	
-	public Inventory onRegionEnter(RegionLeaveEvent e) {
+	public Inventory onRegionLeave(RegionLeaveEvent e) {
 		
 		if (e.getRegion().getId().equals("starter")) {
+			
+			e.getPlayer.getInventory().clear();
 	
 	final Inventory StringToInventory(String invString) {
         String[] serializedBlocks = invString.split(";");
