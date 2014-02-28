@@ -14,10 +14,19 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.ChatColor
 
 public class StarterCMD extends PvPPlugin {
 		
 	public void onRegionEnter(RegionEnterEvent e) {
+		
+		if (e.getPlayer().!hasPermission("pvp.starter") {
+			
+			Player player = e.getPlayer();
+			Command cmd = "/spawn";
+			Bukkit.getServer().dispatchCommand(player.getServer().getConsoleSender(), cmd + player);
+			player.sendMessage(COLOR.RED + "You are not permitted to enter the starter arena.")
+		} else {
 		
 		if (e.getRegion().getId().equals("starter")) {
 		    public static String InventoryToString(Inventory invInventory) {
@@ -71,4 +80,5 @@ public class StarterCMD extends PvPPlugin {
 		
 	}
 
+}
 }
