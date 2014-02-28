@@ -8,3 +8,6 @@ permissions:
     pvp.starter:
         description: Allows the player to enter the starter arena.
         default: true
+    pvp.moshpit:
+        description: Allows the player to enter the moshpit arena.
+        default: true
