@@ -1,0 +1,10 @@
+name: PvPPlugin
+version: 0.0.1
+main: eu.mcmania.pvpplugin
+author: Dark1ine
+database: true
+depend: WorldGuard, WorldGuardRegionEvents
+permissions: 
+    pvp.starter:
+        description: Allows the player to enter the starter arena.
+        default: true
