@@ -21,8 +21,11 @@ public class StarterCMD extends PvPPlugin {
 
 	public void onRegionEnter(RegionEnterEvent e) {
 		final Player player = e.getPlayer();
+		if player.!hasPermission("pvp.bypass") {
+			
+			if (player.hasPermission("pvp.starter")) {
+			
 
-		if (e.getPlayer().hasPermission("pvp.starter")) {
 
 			if (e.getRegion().getId().equals("starter")) {
 				final String InventoryToString(Inventory invInventory) {
@@ -67,6 +70,11 @@ public class StarterCMD extends PvPPlugin {
 			player.sendMessage("&4You are not permitted to enter the starter arena.");
 
 						}
+						
+					
+						
+					}
+						
 					}
 
 				}
@@ -79,6 +87,9 @@ public class StarterCMD extends PvPPlugin {
 			inventory.addItem(food);
 
 		} 
+		} else {
+						
+			player.sendMessage("You have kept your items. Welcome to the starter arena " + player + ".")
 	}
 
 }
