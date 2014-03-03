@@ -11,3 +11,6 @@ permissions:
     pvp.moshpit:
         description: Allows the player to enter the moshpit arena.
         default: true
+    pvp.bypass:
+        description: Allows player with permission to bypass inventory clears and kit.
+        default: false
