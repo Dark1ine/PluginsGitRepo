@@ -1,2 +1,2 @@
-sword: MATERIAL.STONE_SWORD, 1
-food: MATERIAL.COOKED_BEEF, 192
+enabled: true
+kit: true
