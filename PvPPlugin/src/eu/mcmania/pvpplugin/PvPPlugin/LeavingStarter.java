@@ -11,7 +11,11 @@ public class LeavingStarter extends PvPPlugin {
 	
 	public Inventory onRegionLeave(RegionLeaveEvent e) {
 		
+		final Player player = e.getPlayer()
+		
 		if (e.getRegion().getId().equals("starter")) {
+			
+			if player.!hasPermission("pvp.bypass") {
 			
 			e.getPlayer.getInventory().clear();
 	
@@ -58,6 +62,11 @@ public class LeavingStarter extends PvPPlugin {
        
         return deserializedInventory;
 		}
+			} else {
+				
+				player.sendMessage("You do not need your items returned.");
+				
+			}
     }
 }
 	
