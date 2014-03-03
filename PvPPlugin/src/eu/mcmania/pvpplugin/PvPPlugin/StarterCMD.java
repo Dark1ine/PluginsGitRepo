@@ -89,7 +89,7 @@ public class StarterCMD extends PvPPlugin {
 		} 
 		} else {
 						
-			player.sendMessage("You have kept your items. Welcome to the starter arena " + player + ".")
+			player.sendMessage("You have kept your items. Welcome to the starter arena " + player + ".");
 	}
 
 }
