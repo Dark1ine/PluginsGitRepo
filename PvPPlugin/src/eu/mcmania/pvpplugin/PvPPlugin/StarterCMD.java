@@ -20,15 +20,15 @@ import org.bukkit.ChatColor;
 public class StarterCMD extends PvPPlugin {
 
 	public void onRegionEnter(RegionEnterEvent e) {
-		final Player player = e.getPlayer();
-		if player.!hasPermission("pvp.bypass") {
+	final Player player = e.getPlayer();
+	
+		if (e.getRegion().getId().equals("starter")) {
+		
+			if player.!hasPermission("pvp.bypass") {
+				
+				if (player.hasPermission("pvp.starter")) {
 			
-			if (player.hasPermission("pvp.starter")) {
-			
-
-
-			if (e.getRegion().getId().equals("starter")) {
-				final String InventoryToString(Inventory invInventory) {
+									final String InventoryToString(Inventory invInventory) {
 					String serialization = invInventory.getSize() + ";";
 					for (int i = 0; i < invInventory.getSize(); i++)
 					{
@@ -63,35 +63,35 @@ public class StarterCMD extends PvPPlugin {
 
 							serialization += i + "#" + serializedItemStack + ";";
 			
-		} else {
 			
-			String cmd = "/spawn";
-			Bukkit.getServer().dispatchCommand(player.getServer().getConsoleSender(), cmd + player);
-			player.sendMessage("&4You are not permitted to enter the starter arena.");
+							ItemStack sword = new ItemStack(Material.STONE_SWORD, 1);
+							ItemStack food = new ItemStack(Material.COOKED_BEEF, 192);
+							PlayerInventory inventory = player.getInventory();
 
-						}
-						
-					
-						
-					}
-						
-					}
-
+							inventory.addItem(sword);
+							inventory.addItem(food);
+				
+				
+				} else {
+					String cmd = "/spawn";
+					Bukkit.getServer().dispatchCommand(player.getServer().getConsoleSender(), cmd + player);
+					player.sendMessage("&4You are not permitted to enter the starter arena.");
 				}
-
-			ItemStack sword = new ItemStack(Material.STONE_SWORD, 1);
-			ItemStack food = new ItemStack(Material.COOKED_BEEF, 192);
-			PlayerInventory inventory = player.getInventory();
-
-			inventory.addItem(sword);
-			inventory.addItem(food);
-
-		} 
-		} else {
-						
+			
+			
+			
+				
+			} else {
+			
 			player.sendMessage("You have kept your items. Welcome to the starter arena " + player + ".");
+			
+			}
+			
+		}
+		
+		
+		
+		
 	}
 
-}
-}
 
