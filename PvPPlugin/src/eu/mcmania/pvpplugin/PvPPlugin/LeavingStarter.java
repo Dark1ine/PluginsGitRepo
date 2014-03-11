@@ -9,15 +9,15 @@ import com.mewin.WGRegionEvents.events.RegionLeaveEvent;
 
 public class LeavingStarter extends PvPPlugin {
 	
-	public Inventory onRegionLeave(RegionLeaveEvent e) {
+	public Inventory onRegionLeave(RegionLeaveEvent e) { // When the player leaves a region...
 		
-		final Player player = e.getPlayer()
-		
-		if (e.getRegion().getId().equals("starter")) {
+		final Player player = e.getPlayer(); // Defines the player who left the region...
+		 
+		if (e.getRegion().getId().equals("starter")) { // If the region is starter...
 			
-			if player.!hasPermission("pvp.bypass") {
+			if player.!hasPermission("pvp.bypass") { //If the player doesn't have kit bypass permissions...
 			
-			e.getPlayer.getInventory().clear();
+			e.getPlayer.getInventory().clear(); // Clears the player's inventory.
 	
 	final Inventory StringToInventory(String invString) {
         String[] serializedBlocks = invString.split(";");
@@ -64,7 +64,7 @@ public class LeavingStarter extends PvPPlugin {
 		}
 			} else {
 				
-				player.sendMessage("You do not need your items returned.");
+				player.sendMessage("You do not need your items returned."); // Informs the player that they have bypassed kit issue.
 				
 			}
     }
