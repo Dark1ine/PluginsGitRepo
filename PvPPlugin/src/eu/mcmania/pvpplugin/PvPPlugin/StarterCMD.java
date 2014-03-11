@@ -19,17 +19,17 @@ import org.bukkit.ChatColor;
 
 public class StarterCMD extends PvPPlugin {
 
-	public void onRegionEnter(RegionEnterEvent e) {
-	final Player player = e.getPlayer();
+	public void onRegionEnter(RegionEnterEvent e) { // Detects player entering a region.
+	final Player player = e.getPlayer(); // Defines who the player is.
 	
-		if (e.getRegion().getId().equals("starter")) {
+		if (e.getRegion().getId().equals("starter")) { // If the region entered is starter...
 		
-			if player.!hasPermission("pvp.bypass") {
+			if player.!hasPermission("pvp.bypass") { // If the player cannot bypass kit issue...
 				
-				if (player.hasPermission("pvp.starter")) {
+				if (player.hasPermission("pvp.starter")) { // If the player is allowed in...
 			
-									final String InventoryToString(Inventory invInventory) {
-					String serialization = invInventory.getSize() + ";";
+					final String InventoryToString(Inventory invInventory) {
+					String serialization = invInventory.getSize() + ";"; // Stores inv as string.
 					for (int i = 0; i < invInventory.getSize(); i++)
 					{
 						ItemStack is = invInventory.getItem(i);
@@ -72,18 +72,18 @@ public class StarterCMD extends PvPPlugin {
 							inventory.addItem(food);
 				
 				
-				} else {
-					String cmd = "/spawn";
-					Bukkit.getServer().dispatchCommand(player.getServer().getConsoleSender(), cmd + player);
-					player.sendMessage("&4You are not permitted to enter the starter arena.");
+				} else { // If the player is banned from the region...
+					String cmd = "/spawn"; // Defines the command to take them to spawn...
+					Bukkit.getServer().dispatchCommand(player.getServer().getConsoleSender(), cmd + player); // Forces the player to execute the command.
+					player.sendMessage("&4You are not permitted to enter the starter arena."); // Informs them that they are not allowed to enter the arena.
 				}
 			
 			
 			
 				
-			} else {
+			} else { // If the player has kit bypass permissions...
 			
-			player.sendMessage("You have kept your items. Welcome to the starter arena " + player + ".");
+			player.sendMessage("You have kept your items. Welcome to the starter arena " + player + "."); // Informs them that they have kept their items.
 			
 			}
 			
