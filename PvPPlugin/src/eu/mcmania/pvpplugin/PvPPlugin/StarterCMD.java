@@ -27,7 +27,7 @@ public class StarterCMD extends PvPPlugin {
 			if player.!hasPermission("pvp.bypass") { // If the player cannot bypass kit issue...
 				
 				if (player.hasPermission("pvp.starter")) { // If the player is allowed in...
-			
+					getLogger().info(player + "has entered that starter arena."); 
 					final String InventoryToString(Inventory invInventory) {
 					String serialization = invInventory.getSize() + ";"; // Stores inv as string.
 					for (int i = 0; i < invInventory.getSize(); i++)
