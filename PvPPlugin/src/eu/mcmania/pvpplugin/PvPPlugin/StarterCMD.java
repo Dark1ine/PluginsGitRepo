@@ -67,6 +67,8 @@ public class StarterCMD extends PvPPlugin {
 							ItemStack sword = new ItemStack(Material.STONE_SWORD, 1);
 							ItemStack food = new ItemStack(Material.COOKED_BEEF, 192);
 							PlayerInventory inventory = player.getInventory();
+							
+							inventory.clear();
 
 							inventory.addItem(sword);
 							inventory.addItem(food);
