@@ -17,7 +17,7 @@ public class LeavingStarter extends PvPPlugin {
 			
 			if player.!hasPermission("pvp.bypass") { //If the player doesn't have kit bypass permissions...
 			
-			e.getPlayer.getInventory().clear(); // Clears the player's inventory.
+			player.getInventory().clear(); // Clears the player's inventory.
 	
 	final Inventory StringToInventory(String invString) {
         String[] serializedBlocks = invString.split(";");
